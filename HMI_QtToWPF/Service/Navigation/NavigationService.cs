@@ -30,17 +30,19 @@ public partial class NavigationService : ObservableObject
     ServerJoinVM? _ServerJoinVM = null;
     MainVM? _MainVM = null;
     SelectAcountVM? _SelectAcountVM = null;
+    TimeInputVM? _TimeInputVM = null;
     public object? PageParam { get; set; }
     #endregion
 
     #region ctor
     public NavigationService(LoginVM loginVM, ServerJoinVM serverJoinVM, 
-        MainVM mainVM, SelectAcountVM selectAcountVM)
+        MainVM mainVM, SelectAcountVM selectAcountVM, TimeInputVM? timeInputVM)
     {
         this._LoginVM = loginVM;
         this._ServerJoinVM = serverJoinVM;
         this._MainVM = mainVM;
-        this._SelectAcountVM= selectAcountVM;
+        this._SelectAcountVM = selectAcountVM;
+        this._TimeInputVM = timeInputVM;
 
         this.CurrentPage = this._LoginVM;
         this._stk.Push(loginVM);
@@ -72,6 +74,12 @@ public partial class NavigationService : ObservableObject
             this.CurrentPage = this._SelectAcountVM;
             this._stk?.Push(this._SelectAcountVM);
         }
+        else if(name == "TimeInputVM")
+        {
+            this.CurrentPage = this._TimeInputVM;
+            this._stk?.Push(this._TimeInputVM);
+        }
+        
 
         if (this._CurrentPage != null)
         {
@@ -100,7 +108,7 @@ public partial class NavigationService : ObservableObject
         {
             this._stk?.Pop();
         }
-        this._CurrentPage = this._stk?.Peek();
+        this.CurrentPage = this._stk?.Peek();
     }
 
     bool CanBackPage()

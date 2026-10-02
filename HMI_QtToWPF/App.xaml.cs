@@ -27,6 +27,7 @@ public partial class App : Application
     MainVM? _MainVM = null;
     SelectAcountVM? _SelectAcountVM = null;
     IPopUpService? _PopUpService = null;
+    TimeInputVM? _TimeInputVM = null;
 
     protected override void OnStartup(StartupEventArgs e)
     {
@@ -44,6 +45,7 @@ public partial class App : Application
         services.AddSingleton<MainVM>();
         services.AddSingleton<SelectAcountVM>();
         services.AddSingleton<IPopUpService, PopUpService>();
+        services.AddSingleton<TimeInputVM>();
         // 
         //
         this._ServiceProvider = services.BuildServiceProvider();
@@ -57,6 +59,7 @@ public partial class App : Application
         this._MainVM = this._ServiceProvider.GetRequiredService<MainVM>();
         this._SelectAcountVM = this._ServiceProvider.GetRequiredService<SelectAcountVM>();
         this._PopUpService = this._ServiceProvider.GetRequiredService<IPopUpService>();
+        this._TimeInputVM = this._ServiceProvider.GetRequiredService<TimeInputVM>();
 
         this._MainWindow = this._ServiceProvider.GetService<MainWindow>();
 
@@ -65,6 +68,7 @@ public partial class App : Application
         this._ServerJoinVM.NavigationService = this._NavigationService;
         this._MainVM.NavigationService = this._NavigationService;
         this._SelectAcountVM.NavigationService = this._NavigationService;
+        this._TimeInputVM.NavigationService = this._NavigationService;
 
         this._WebSocketService.LoginEvent += this._ServerJoinVM.LoginEvent_Form_WebSocketService;
 

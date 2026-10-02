@@ -29,6 +29,10 @@
             <page:SelectAcountPage/>
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type vm:TimeInputVM}">
+            <page:TimeInputPage/>
+        </DataTemplate>
+        
     </Window.Resources>
 
     <Grid>

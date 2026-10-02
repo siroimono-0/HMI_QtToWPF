@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="HMI_QtToWPF.View.ControlModule.InputBackGround"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HMI_QtToWPF.View.ControlModule"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1280"
+             Height="800" Width="1280">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/HMI_QtToWPF;component/View/Style/StyleDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "*" />
+        </Grid.RowDefinitions >
+
+        <Border Grid.Row="0"
+            Background="#000000" Panel.ZIndex="-1"/>
+        <!--<controlmodule:KeyPad3x3/>-->
+
+        <Image Grid.Row="0" Grid.Column= "0"
+                   Grid.ColumnSpan= "2"
+                   Grid.RowSpan= "2"
+                   Stretch= "Uniform"
+                   Margin= "30,30,1100,670"
+                   Source= "/HMI_QtToWPF;component/Images/combo.png" >
+        </Image >
+
+        <TextBlock Margin="250,20,300, 680"
+                   Text="Please Input Amount"
+                   FontSize="70"
+                   Foreground="#FFFFFF"
+                   FontFamily="DIN"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+            />
+
+
+        <Button Grid.Row= "0" 
+                    Margin= "1000,20,20,680"
+                    Style= "{StaticResource HomeBtnStyle}"
+                    Content= "Home"
+                    FontSize= "70" Foreground= "#3DFFB0"
+                    Command= "{Binding HomeClickedCommand}" />
+
+        <Button Grid.Row= "0"
+                    Margin= "20,680,1000,20"
+                    Style= "{StaticResource BackBtnStyle}"
+                    Content= "Back"
+                    FontSize= "70" Foreground= "#FF4D4D"
+                    Command= "{Binding BackClickedCommand}" />
+
+    </Grid >
+
+</UserControl>

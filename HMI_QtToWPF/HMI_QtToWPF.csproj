@@ -9,8 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\battery.png" />
+    <None Remove="Images\combo.png" />
+    <None Remove="Images\time.png" />
+    <None Remove="Images\voltage.png" />
+    <None Remove="Images\won.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Model\Store\" />
-    <Folder Include="Images\" />
     <Folder Include="Service\DB\" />
     <Folder Include="Service\Sereal\" />
   </ItemGroup>
@@ -20,6 +27,14 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.12" />
     <PackageReference Include="SharpVectors" Version="1.8.6" />
     <PackageReference Include="SharpVectors.Wpf" Version="1.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\battery.png" />
+    <Resource Include="Images\combo.png" />
+    <Resource Include="Images\time.png" />
+    <Resource Include="Images\voltage.png" />
+    <Resource Include="Images\won.png" />
   </ItemGroup>
 
 </Project>

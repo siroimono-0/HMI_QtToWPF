@@ -1,0 +1,128 @@
+﻿<Window x:Class="HMI_QtToWPF.View.PopUp.InputPopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HMI_QtToWPF.View.PopUp"
+        mc:Ignorable="d"
+        Title="InputPopUp" Height="400" Width="600"
+        WindowStyle="None">
+    <Grid>
+
+        <Border Background="Black" Panel.ZIndex="-1"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <TextBlock  Grid.Row="0"
+                FontFamily="DIN"
+                   FontSize="90"
+                   Foreground="#FFFFFF"
+                   Text="Pleas Input"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="15"
+                                      Color="#FFFFFF"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+                </TextBlock.Effect>
+            </TextBlock>
+
+            <TextBlock  Grid.Row="1"
+                FontFamily="DIN"
+                   FontSize="90"
+                   Foreground="#FFFFFF"
+                   Text="up to Max "
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="15"
+                                      Color="#FFFFFF"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+                </TextBlock.Effect>
+            </TextBlock>
+
+            <TextBlock  Grid.Row="2"
+                FontFamily="DIN"
+                   FontSize="80"
+                   Foreground="#FFFFFF"
+                   Text="Lower Amount"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="15"
+                                      Color="#FFFFFF"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+                </TextBlock.Effect>
+            </TextBlock>
+
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock  Grid.Row="0"
+                FontFamily="DIN"
+                   FontSize="30"
+                   Foreground="#FFFFFF"
+                   Text="up to 10min"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="15"
+                                      Color="#FFFFFF"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+
+                <TextBlock  Grid.Row="0" Grid.Column="1"
+                FontFamily="DIN"
+                   FontSize="30"
+                   Foreground="#FFFFFF"
+                   Text="up to 1000won"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="15"
+                                      Color="#FFFFFF"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+
+                <TextBlock  Grid.Row="1" Grid.Column="0"
+                FontFamily="DIN"
+                   FontSize="30"
+                   Foreground="#FFFFFF"
+                   Text="up to 5Kwh"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <DropShadowEffect BlurRadius="15"
+                                      Color="#FFFFFF"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>

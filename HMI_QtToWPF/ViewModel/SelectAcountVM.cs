@@ -36,7 +36,7 @@ public partial class SelectAcountVM : NavigationBaseVM
     [RelayCommand]
     void TIMEClicked()
     {
-        
+        this.Navigate("TimeInputVM");
     }
 
     [RelayCommand]

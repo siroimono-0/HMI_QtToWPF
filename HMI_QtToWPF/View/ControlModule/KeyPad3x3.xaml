@@ -4,14 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HMI_QtToWPF.View.ControlModule"
+             xmlns:vm="clr-namespace:HMI_QtToWPF.ViewModel"
              mc:Ignorable="d" 
-            d:DesignHeight="600" d:DesignWidth="600"
-             Width="600" Height="600">
-    
+            d:DesignHeight="450" d:DesignWidth="450"
+            d:DataContext="{d:DesignInstance Type=vm:TimeInputVM, IsDesignTimeCreatable=False}"
+             Width="450" Height="450">
+
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/View/Style/StyleDictionary.xaml"/>
+                <ResourceDictionary Source="/HMI_QtToWPF;component/View/Style/StyleDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -45,6 +47,8 @@
                     <RowDefinition Height= "*"/>
                     <RowDefinition Height= "10"/>
                     <RowDefinition Height= "*"/>
+                    <RowDefinition Height= "10"/>
+                    <RowDefinition Height= "*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions >
                     <ColumnDefinition Width= "*"/>
@@ -58,7 +62,104 @@
                     Grid.Row= "0" Grid.Column= "0"
                     x:Name= "btn1"
                     Content= "1"
-                    Style= "{StaticResource AmountKeyPadBtnStyle}"/>
+                    FontSize="80"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="1"/>
+                <Button
+                    Grid.Row= "0" Grid.Column= "2"
+                    x:Name= "btn2"
+                    Content= "2"
+                    FontSize="80"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="2"/>
+                <Button
+                    Grid.Row= "0" Grid.Column= "4"
+                    x:Name= "btn3"
+                    Content= "3"
+                    FontSize="80"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="3"/>
+                <Button
+                    Grid.Row= "2" Grid.Column= "0"
+                    x:Name= "btn4"
+                    Content= "4"
+                    FontSize="80"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="4"/>
+                <Button
+                    Grid.Row= "2" Grid.Column= "2"
+                    x:Name= "btn5"
+                    Content= "5"
+                    FontSize="80"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="5"/>
+                <Button
+                    Grid.Row= "2" Grid.Column= "4"
+                    x:Name= "btn6"
+                    Content= "6"
+                    FontSize="80"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="6"/>
+                <Button
+                    Grid.Row= "4" Grid.Column= "0"
+                    x:Name= "btn7"
+                    Content= "7"
+                    FontSize="80"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="7"/>
+                <Button
+                    Grid.Row= "4" Grid.Column= "2"
+                    x:Name= "btn8"
+                    Content= "8"
+                    FontSize="80"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="8"/>
+                <Button
+                    Grid.Row= "4" Grid.Column= "4"
+                    x:Name= "btn9"
+                    Content= "9"
+                    FontSize="80"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="9"/>
+
+
+
+                
+                
+                <Button
+                    Grid.Row= "6" Grid.Column= "2"
+                    x:Name= "btn0"
+                    Content= "0"
+                    FontSize="80"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="0"/>
+                <Button
+                    Grid.Row= "6" Grid.Column= "0"
+                    x:Name= "btnDelete"
+                    Content= "Delete"
+                    FontSize="40"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="Delete"/>
+
+                <Button
+                    Grid.Row= "6" Grid.Column= "4"
+                    x:Name= "btnReset"
+                    Content= "Insert"
+                    FontSize="40"
+                    Style= "{StaticResource AmountKeyPadBtnStyle}"
+                    Command="{Binding KeyPadBtnClickedCommand}"
+                    CommandParameter="Insert"/>
             </Grid>
 
         </Border>
