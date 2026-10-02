@@ -1,0 +1,31 @@
+# Visual Studio local settings and caches
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET / WPF build outputs (all projects and configurations)
+[Bb]in/
+[Oo]bj/
+
+# Rider / ReSharper local settings and caches
+.idea/
+_ReSharper*/
+*.DotSettings.user
+
+# Test results and coverage outputs
+[Tt]est[Rr]esults/
+*.coverage
+*.coveragexml
+
+# Temporary files and build logs
+*.tmp
+*.temp
+*.log
+*.binlog
+~$*
+
+# Windows Explorer metadata
+Thumbs.db
+Desktop.ini

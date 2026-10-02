@@ -1,0 +1,208 @@
+﻿<UserControl x:Class="HMI_QtToWPF.View.Page.LoginPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HMI_QtToWPF.View.Page"
+             xmlns:vm="clr-namespace:HMI_QtToWPF.ViewModel"
+             
+            d:DataContext="{d:DesignInstance Type=vm:LoginVM, IsDesignTimeCreatable=False}"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1280"
+             Height="800" Width="1280">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/View/Style/StyleDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0"
+            Background="Black"
+                Panel.ZIndex="-1"/>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+
+
+            <!--<TextBox Grid.Row="1" Grid.Column="1"
+                 Style="{StaticResource RoundBorderTextBoxStyle}"
+                 Text="123123123"/>-->
+
+            <TextBox Grid.Row="1" Grid.Column="1"
+                 Text="{Binding Number, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     Foreground="White"
+                     FontFamily="DIN"
+                     FontSize="100">
+
+
+                <TextBox.Template>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border 
+                        BorderBrush="#FFFFFF" BorderThickness="3"
+                        CornerRadius="15">
+
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                      VerticalAlignment="Center"
+                                      HorizontalAlignment="Right"
+                                          Padding="0,0,30,0"/>
+
+                            <Border.Effect>
+                                <DropShadowEffect BlurRadius="10"
+                                                  Color="#8FE8FE"
+                                                  ShadowDepth="0"
+                                                  Opacity="0.8"/>
+                            </Border.Effect>
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+
+                <TextBox.Effect>
+                    <DropShadowEffect BlurRadius="5"
+                                      Color="#8FE8FE"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+                </TextBox.Effect>
+
+            </TextBox>
+
+            <Grid Grid.Row="3" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="180"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="180"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0"/>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="1" Grid.Column="1"
+                    Content="1"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="1"
+                    >
+
+                </Button>
+
+                <Button Grid.Row="1" Grid.Column="3"
+                    Content="2"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="2">
+                </Button>
+
+                <Button Grid.Row="1" Grid.Column="5"
+                    Content="3"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="3">
+                </Button>
+
+                <Button Grid.Row="1" Grid.Column="7"
+                    Content="4"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="4">
+                </Button>
+
+                <Button Grid.Row="1" Grid.Column="9"
+                    Content="5"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="5">
+                </Button>
+
+                <Button Grid.Row="3" Grid.Column="1"
+                    Content="6"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="6">
+                </Button>
+
+                <Button Grid.Row="3" Grid.Column="3"
+                    Content="7"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="7">
+                </Button>
+
+                <Button Grid.Row="3" Grid.Column="5"
+                    Content="8"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="8">
+                </Button>
+
+                <Button Grid.Row="3" Grid.Column="7"
+                    Content="9"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="9">
+                </Button>
+
+                <Button Grid.Row="3" Grid.Column="9"
+                    Content="0"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="0">
+                </Button>
+
+                <Button Grid.Row="1" Grid.Column="11"
+                    Content="Delete"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="Delete"
+                        FontSize="50">
+                </Button>
+
+                <Button Grid.Row="3" Grid.Column="11"
+                    Content="Login"
+                    Style="{StaticResource LoginKeyPadBtnStyle}"
+                    Command="{Binding LoginKeyPadClickedCommand}"
+                    CommandParameter="Login"
+                        FontSize="60">
+                </Button>
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+
+</UserControl>

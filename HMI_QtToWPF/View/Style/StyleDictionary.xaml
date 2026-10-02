@@ -1,0 +1,178 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="RoundBorderTextBoxStyle" TargetType="TextBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border BorderBrush="Red" BorderThickness="5" CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="LoginKeyPadBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontFamily" Value="DIN"/>
+        <Setter Property="FontSize" Value="120"/>
+        <Setter Property="Foreground" Value="#8FE8FE"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderBrush="#FFFFFF" BorderThickness="3" CornerRadius="5">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="10"
+                                      Color="#8FE8FE"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="AmountKeyPadBtnStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontFamily" Value="DIN"/>
+        <Setter Property="FontSize" Value="150"/>
+        <Setter Property="Foreground" Value="#8FE8FE"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderBrush="#FFFFFF" BorderThickness="3" CornerRadius="5">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="10"
+                                      Color="#8FE8FE"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="ServerJoinBtnStyle" TargetType="Button">
+
+        <Setter Property="FontFamily" Value="DIN"/>
+        <Setter Property="FontSize" Value="120"/>
+        <Setter Property="Foreground" Value="#8FE8FE"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderBrush="#FFFFFF" BorderThickness="5" CornerRadius="10" Background="Transparent">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="15"
+                                      Color="#8FE8FE"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="BackBtnStyle" TargetType="Button">
+
+        <Setter Property="FontFamily" Value="DIN"/>
+        <Setter Property="FontSize" Value="70"/>
+        <Setter Property="Foreground" Value="#FFFFFF"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderBrush="#FF2D3D" BorderThickness="5" CornerRadius="10" Background="Transparent">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="15"
+                                      Color="#FF2D3D"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="HomeBtnStyle" TargetType="Button">
+
+        <Setter Property="FontFamily" Value="DIN"/>
+        <Setter Property="FontSize" Value="70"/>
+        <Setter Property="Foreground" Value="#FFFFFF"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderBrush="#3DFFB0" BorderThickness="5" CornerRadius="10" Background="Transparent">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="15"
+                                      Color="#3DFFB0"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NeonRoundBorder" TargetType="Border">
+        <Setter Property="BorderBrush" Value="#FFFFFF"/>
+        <Setter Property="BorderThickness" Value="5"/>
+        <Setter Property="CornerRadius" Value="15"/>
+
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="15"
+                                      Color="#FFFFFF"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NeonTextWhiteStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#FFFFFF"/>
+        <Setter Property="FontFamily" Value="DIN"/>
+        <Setter Property="FontSize" Value="100"/>
+
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="15"
+                                      Color="#FFFFFF"
+                                      ShadowDepth="0"
+                                      Opacity="0.8"/>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+
+
+</ResourceDictionary>
